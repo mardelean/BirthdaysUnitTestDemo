@@ -68,17 +68,17 @@ class PeopleListViewControllerTests: XCTestCase {
   
   func testSortingCanBeChanged() {
     // given
-//    let mockUserDefaults = MockUserDefaults(suiteName: "testing")!
-//    viewController.userDefaults = mockUserDefaults
-//    
-//    // when
-//    let segmentedControl = UISegmentedControl()
-//    segmentedControl.selectedSegmentIndex = 0
-////    segmentedControl.addTarget(viewController, action: #selector(PeopleListViewController.changeSorting(_:)), forControlEvents: .ValueChanged)
-//    segmentedControl.sendActionsForControlEvents(.ValueChanged)
-//    
-//    // then
-//    XCTAssertTrue(mockUserDefaults.sortWasChanged, "Sort value in user defaults should be altered")
+    let mockUserDefaults = MockUserDefaults(suiteName: "testing")!
+    viewController.userDefaults = mockUserDefaults
+    
+    // when
+    let segmentedControl = UISegmentedControl()
+    segmentedControl.selectedSegmentIndex = 0
+//    segmentedControl.addTarget(viewController, action: #selector(PeopleListViewController.changeSorting(_:)), forControlEvents: .ValueChanged)
+    segmentedControl.sendActionsForControlEvents(.ValueChanged)
+    
+    // then
+    XCTAssertTrue(mockUserDefaults.sortWasChanged, "Sort value in user defaults should be altered")
   }
   
   func testFetchingPeopleFromAPICallsAddPeople() {
